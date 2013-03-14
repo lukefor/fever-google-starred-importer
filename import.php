@@ -19,7 +19,7 @@ foreach($items as $item){
 			$content = $item['content']['content'];
 			
 		$stmt->execute([
-			$feedId, $item['id'], $item['title'], $item['author'], $content, $item['alternate'][0]['href'], sprintf('%u', crc32($item['alternate']['href'])), $item['published'], $item['published'],
+			$feedId, $item['id'], $item['title'], $item['author'], $content, $item['alternate'][0]['href'], sprintf('%u', crc32($item['alternate'][0]['href'])), $item['published'], $item['published'],
 		]);		
 	}
 }
